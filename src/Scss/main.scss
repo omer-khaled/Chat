@@ -1,0 +1,8 @@
+@use './signup';
+@use './home';
+.App{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(120deg , #fff , #000);
+    position: relative;
+}
