@@ -1,0 +1,460 @@
+.App > .form {
+  width: 30%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+.App > .form > form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.App > .form > form .form-head {
+  font-size: 25px;
+  font-weight: 700;
+}
+.App > .form > form .form-name {
+  color: #303030;
+  font-weight: 400;
+}
+.App > .form > form .input-control {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+}
+.App > .form > form .input-control input {
+  transition: 0.3s;
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #868484;
+  padding: 10px;
+}
+.App > .form > form .input-control input[type=file] {
+  opacity: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.App > .form > form .input-control input[type=file]:hover + div > span {
+  color: blue;
+}
+.App > .form > form .input-control input:focus {
+  outline: 0;
+}
+.App > .form > form .input-control input:first-of-type {
+  margin-top: 10px;
+}
+.App > .form > form .input-control div {
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.App > .form > form .input-control div img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 5;
+  vertical-align: middle;
+}
+.App > .form > form .input-control div i {
+  font-size: 25px;
+  position: relative;
+  top: 3px;
+  margin-right: 3px;
+}
+.App > .form > form button {
+  width: 90%;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 17px;
+  border: 0;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.App > .form > form button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.App > .form > form button:disabled {
+  background-color: #303030;
+  color: #868484;
+  cursor: not-allowed;
+}
+.App > .form > form button:disabled:hover {
+  background-color: #303030;
+  color: #868484;
+}
+.App > .form > form .alert {
+  margin-top: 5px;
+  font-size: 14px;
+}
+.App > .form > form .danger {
+  color: red;
+  font-size: 12px;
+}
+
+@media (width <= 768px) {
+  .App > .form {
+    width: 80%;
+  }
+}
+@media (768px < width <= 992px) {
+  .App > .form {
+    width: 50%;
+  }
+}
+.home {
+  width: 85%;
+  height: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .allusers {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.home .allusers .myinfo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+.home .allusers .myinfo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.home .allusers .myinfo .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home .allusers .myinfo .info p {
+  margin: 0;
+  padding: 0;
+}
+.home .allusers .myinfo .info p:first-of-type {
+  margin-bottom: 5px;
+}
+.home .users {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px 0 0 8px;
+  padding: 10px;
+  overflow-y: auto;
+}
+.home .users::-webkit-scrollbar {
+  width: 7px;
+}
+.home .users::-webkit-scrollbar-thumb {
+  background-color: rgb(36, 36, 36);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.home .users::-webkit-scrollbar-thumb:hover {
+  background-color: aquamarine;
+}
+.home .users .user-info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  background-color: #b8b8b8;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.home .users .user-info:hover {
+  background-color: rgb(155, 202, 186);
+}
+.home .users .user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.home .users .user-info .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home .users .user-info .info p {
+  margin: 0;
+  padding: 0;
+}
+.home .users .user-info .info p:first-of-type {
+  margin-bottom: 5px;
+}
+.home .window {
+  width: 75%;
+  height: 100%;
+  background-color: #ddddf6;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.home .window .window-header {
+  background-color: #5e5b8e;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home .window .window-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.home .window .window-header p {
+  color: #fff;
+}
+.home .window .window-body {
+  width: 100%;
+  padding: 10px 20px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  overflow: auto;
+}
+.home .window .window-body .fromhe {
+  width: fit-content;
+  margin-left: auto;
+  background-color: #fff;
+  padding: 5px;
+  position: relative;
+}
+.home .window .window-body .fromhe:not(:first-child) {
+  margin-top: 10px;
+}
+.home .window .window-body .fromhe img {
+  width: 200px;
+  height: 200px;
+  margin-top: 5px;
+}
+.home .window .window-body .fromhe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -14px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  clip-path: polygon(0% 100%, 100% 0%, 0% 0%);
+}
+.home .window .window-body .fromme {
+  width: fit-content;
+  background-color: #d9fdd3;
+  padding: 5px;
+  position: relative;
+}
+.home .window .window-body .fromme:not(:first-child) {
+  margin-top: 10px;
+}
+.home .window .window-body .fromme img {
+  width: 200px;
+  height: 200px;
+  margin-top: 5px;
+}
+.home .window .window-body .fromme::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -14px;
+  width: 15px;
+  height: 15px;
+  background-color: #d9fdd3;
+  clip-path: polygon(100% 100%, 100% 0%, 0% 0%);
+}
+.home .window .window-body .time {
+  font-size: 10px;
+  font-weight: 700;
+  color: #b8b8b8;
+}
+.home .window .window-body .empty {
+  border: 10px solid #5e5b8e;
+  border-left-color: transparent;
+  padding: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: anim 2s linear infinite;
+}
+.home .window > .form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.home .window > .form > form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .window > .form > form .input-control {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+.home .window > .form > form .input-control input {
+  padding: 10px 20px;
+}
+.home .window > .form > form .input-control input:first-of-type {
+  flex-grow: 1;
+  border: 0;
+}
+.home .window > .form > form .input-control input:focus {
+  border: 0;
+  outline: 0;
+}
+.home .window > .form > form .input-control .file {
+  position: absolute;
+  right: 110px;
+  z-index: 1;
+  width: 30px;
+  height: 35px;
+  overflow: hidden;
+}
+.home .window > .form > form .input-control .file input {
+  opacity: 0;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+}
+.home .window > .form > form .input-control .file i {
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  font-size: 30px;
+  color: #5e5b8e;
+}
+.home .window > .form > form .input-control button {
+  padding: 10px 20px;
+  background-color: #5e5b8e;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.home .window > .form > form .input-control button:disabled {
+  background-color: #636363;
+  color: black;
+  cursor: not-allowed;
+}
+
+@keyframes anim {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@media (width <= 768px) {
+  .home {
+    flex-direction: column;
+    width: 95%;
+    height: 85vh;
+  }
+}
+@media (width <= 992px) {
+  .home {
+    width: 85%;
+    height: 85vh;
+    flex-direction: column;
+  }
+  .home .allusers {
+    width: 100%;
+    height: auto;
+    overflow-y: visible;
+  }
+  .home .allusers .myinfo {
+    width: 100%;
+  }
+  .home .allusers .users {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    overflow: auto;
+  }
+  .home .allusers .users .user-info {
+    width: fit-content;
+  }
+  .home .allusers .users .user-info .info {
+    display: none;
+  }
+  .home .allusers .users .user-info img {
+    margin: 0;
+  }
+  .home .window {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(120deg, #fff, #000);
+  position: relative;
+}
+
+.handle-h1 {
+  width: 100%;
+  text-align: center;
+  color: #636363;
+}/*# sourceMappingURL=main.css.map */
